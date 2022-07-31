@@ -159,6 +159,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                 ),
               ),
               TextFormField(
+                keyboardType: TextInputType.number,
                 onChanged: (value) {
                   setState(() {
                     price = value;
@@ -176,6 +177,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                 ),
               ),
               TextFormField(
+                keyboardType: TextInputType.number,
                 onChanged: (value) {
                   setState(() {
                     qty = value;

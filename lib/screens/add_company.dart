@@ -16,6 +16,7 @@ class _AddCompanyState extends State<AddCompany> {
   final _addCompanyFormKey = GlobalKey<FormState>();
   String company = '';
   List<Company> companyList = [];
+  final _addCompanyController = TextEditingController();
 
   @override
   void initState() {
@@ -57,6 +58,7 @@ class _AddCompanyState extends State<AddCompany> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   TextFormField(
+                    controller: _addCompanyController,
                     onChanged: (value) {
                       setState(() {
                         company = value;
@@ -88,6 +90,7 @@ class _AddCompanyState extends State<AddCompany> {
                             companyList = [];
                           });
                           mapToList(companyTable);
+                          _addCompanyController.clear();
                         }
                       },
                       child: const Text(

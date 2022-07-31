@@ -16,6 +16,7 @@ class _AddCategoryState extends State<AddCategory> {
   final _addCategoryFormKey = GlobalKey<FormState>();
   String category = '';
   List<Category> categoryList = [];
+  final _categoryController = TextEditingController();
 
   @override
   void initState() {
@@ -57,6 +58,7 @@ class _AddCategoryState extends State<AddCategory> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   TextFormField(
+                    controller: _categoryController,
                     onChanged: (value) {
                       setState(() {
                         category = value;
@@ -88,6 +90,7 @@ class _AddCategoryState extends State<AddCategory> {
                             categoryList = [];
                           });
                           mapToList(categoryTable);
+                          _categoryController.clear();
                         }
                       },
                       child: const Text(
