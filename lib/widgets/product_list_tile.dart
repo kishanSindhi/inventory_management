@@ -51,10 +51,12 @@ class _ProductListTileState extends State<ProductListTile> {
                   width: 100,
                   padding: const EdgeInsets.only(right: 10),
                   decoration: BoxDecoration(
+                    color: kPrimaryColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Image.network(
-                      'https://cdn.arstechnica.net/wp-content/uploads/2016/02/5718897981_10faa45ac3_b-640x624.jpg'),
+                    'https://cdn.arstechnica.net/wp-content/uploads/2016/02/5718897981_10faa45ac3_b-640x624.jpg',
+                  ),
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,

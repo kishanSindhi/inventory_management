@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:inventory_management/constants.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class ImageSlider extends StatefulWidget {
@@ -58,6 +59,7 @@ class _ImageSliderState extends State<ImageSlider> {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
+        color: kPrimaryColor,
       ),
       margin: const EdgeInsets.all(12),
       child: Image(
